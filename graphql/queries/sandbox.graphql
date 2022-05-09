@@ -1,0 +1,14 @@
+query SandBox {
+	alphaDCHomeByPath(_path: "/content/dam/decd-endc/content-fragments/alpha/dev/home") {
+	    item {
+            _path
+	        scPageNameEn
+	        scTitleEn
+            scMostRequested{
+                _path
+                scTitleEn
+                scId
+            }
+        }
+    }
+}            

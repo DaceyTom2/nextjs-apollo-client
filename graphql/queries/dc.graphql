@@ -1,0 +1,35 @@
+{
+	alphaDCHomeByPath(_path: "/content/dam/decd-endc/content-fragments/alpha/dev/home") {
+	    item {
+            _path
+	        scPageNameEn
+	        scTitleEn
+            scSearchForBenefitsAndServices {
+                _path
+                scTitleEn
+            }
+            scImageEn {
+                ... on ImageRef {
+                    _path
+                }
+            }
+            scMostRequested{
+                _path
+                scTitleEn
+                scId
+                scItems {
+                    ... on AlphaDCListModel {
+                        _path
+                        scTitleEn
+                        scItems {
+                            ... on AlphaDCGenericModel {
+                                _path
+                                scTitleEn
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}

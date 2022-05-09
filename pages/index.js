@@ -71,9 +71,9 @@ export default function Home() {
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
-  let res = await queryGraphQL("example")
+  let res = await queryGraphQL()
   .then(result => { return result });
-  console.log(res)
+  console.log(res.data)
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
